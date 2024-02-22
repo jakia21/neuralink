@@ -7689,7 +7689,10 @@ figure {
     justify-self: center;
   }
 }
-
+.hidden {
+  display: none;
+  
+}
 @media screen and (max-width: 768px) {
   .section.beam-background {
     z-index: 0;
@@ -7707,5 +7710,9 @@ figure {
 
     background-attachment: fixed;
     position: relative;
+  }
+
+  .hidden {
+    display: block;
   }
 }

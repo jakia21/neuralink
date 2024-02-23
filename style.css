@@ -2615,7 +2615,7 @@ figure {
 }
 
 .space-large {
-  min-height: 112px;
+  min-height: 114px;
 }
 
 .sg-main-logo {
@@ -7086,8 +7086,14 @@ figure {
 
   .nav-bar-container {
     padding-left: 30px;
+    padding: 0;
   }
-
+  .space {
+    min-height: 20px;
+  }
+  .space-large {
+    min-height: 70px;
+  }
   .section {
     overflow: hidden;
   }

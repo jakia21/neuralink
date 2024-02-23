@@ -3702,7 +3702,7 @@ figure {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 20px 17px;
+  padding: 17px 20px 17px;
   font-family: Open Sans, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -4932,7 +4932,7 @@ figure {
   position: absolute;
   top: 75%;
   bottom: auto;
-  left: 85%;
+  left: 95%;
   right: 0%;
   overflow: hidden;
 }

@@ -3104,7 +3104,10 @@ figure {
 .section {
   width: 100%;
 }
-
+.heading-min{
+  font-size: 48px;
+  line-height:58px ;
+}
 .section.beam-background {
   z-index: 0;
   background-image: linear-gradient(
@@ -7106,7 +7109,10 @@ figure {
     flex-direction: column;
     padding-top: 15%;
   }
-
+.heading-min{
+  font-size: 34px;
+  line-height: 46px;
+}
   .list-item-wrapper {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -7702,19 +7708,12 @@ figure {
 @media screen and (max-width: 768px) {
   .section.beam-background {
     z-index: 0;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.774)
-      ),
-      url("/ban.jpg");
-    /* background-image: linear-gradient(to bottom, transparent 75%, var(--black)),
-      url("https://assets-global.website-files.com/652a06007428444b8a49aaec/652a06007428444b8a49ab13_Beam.jpg"); */
-    /* background-position: center center; */
-    background-size: contain;
-    background-repeat: repeat;
-
-    background-attachment: fixed;
+    background: fixed;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.774)), url(/photo_2024-02-24_00-08-54.jpg);
+    /* background-image: linear-gradient(to bottom, transparent 75%, var(--black)), url(https://assets-global.website-files.com/652a060…/652a060…_Beam.jpg); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
   }
 

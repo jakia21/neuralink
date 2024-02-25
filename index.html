@@ -1314,7 +1314,7 @@
           paragraph.innerHTML = htmlContent.slice(0, htmlContent.indexOf(truncatedTextContent) + truncatedTextContent.length);
   
           const viewMoreLink = document.createElement('a');
-          viewMoreLink.textContent = 'View more';
+          viewMoreLink.textContent = '...View more';
           viewMoreLink.classList.add('text-blue-500');
           viewMoreLink.href = '#';
           paragraph.appendChild(viewMoreLink);

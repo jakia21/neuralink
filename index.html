@@ -1299,38 +1299,39 @@
       </div>
     </div>
   </section>
-
   <script>
     function setupParagraphs() {
       const paragraphs = document.querySelectorAll('.paragraph');
       paragraphs.forEach((paragraph) => {
-        const text = paragraph.textContent;
+        const htmlContent = paragraph.innerHTML;
         const maxChars = 300; // maximum characters to show
-        if (text.length > maxChars) {
-          const truncated = text.slice(0, maxChars) + '...';
-          const truncatedNode = document.createTextNode(truncated);
-          paragraph.textContent = '';
-          paragraph.appendChild(truncatedNode);
-
+        if (htmlContent.replace(/<br\s*\/?>/gi, '').length > maxChars) { // Ignore <br/> tags in length count
+          const wrapper = document.createElement('div');
+          wrapper.innerHTML = htmlContent;
+          const textContent = wrapper.textContent || wrapper.innerText;
+          
+          const truncatedTextContent = textContent.slice(0, maxChars) + '...';
+          paragraph.innerHTML = htmlContent.slice(0, htmlContent.indexOf(truncatedTextContent) + truncatedTextContent.length);
+  
           const viewMoreLink = document.createElement('a');
           viewMoreLink.textContent = 'View more';
           viewMoreLink.classList.add('text-blue-500');
           viewMoreLink.href = '#';
           paragraph.appendChild(viewMoreLink);
-
+  
           viewMoreLink.addEventListener('click', (event) => {
             event.preventDefault();
-            paragraph.textContent = text;
-
+            paragraph.innerHTML = htmlContent; // Restore original HTML content
+  
             const viewLessLink = document.createElement('a');
             viewLessLink.textContent = 'View less';
             viewLessLink.classList.add('text-blue-500');
             viewLessLink.href = '#';
             paragraph.appendChild(viewLessLink);
-
+  
             viewLessLink.addEventListener('click', (event) => {
               event.preventDefault();
-              paragraph.textContent = truncated;
+              paragraph.innerHTML = paragraph.innerHTML.slice(0, htmlContent.indexOf(truncatedTextContent) + truncatedTextContent.length);
               paragraph.appendChild(viewMoreLink);
               viewLessLink.remove();
             });
@@ -1339,6 +1340,7 @@
       });
     }
   </script>
+  
 
   <script>
     window.addEventListener('load', setupParagraphs);

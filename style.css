@@ -3123,6 +3123,21 @@ figure {
   background-attachment: scroll, scroll;
   position: relative;
 }
+.section.beam-background2 {
+  z-index: 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.671),
+      rgba(0, 0, 0, 0.774)
+    ),
+    url("/photo_2024-02-24_00-08-54.jpg");
+  /* background-image: linear-gradient(to bottom, transparent 75%, var(--black)),
+    url("https://assets-global.website-files.com/652a06007428444b8a49aaec/652a06007428444b8a49ab13_Beam.jpg"); */
+  background-position: center center;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+  position: relative;
+}
 .neu-icon {
   width: 230px;
   border-radius: 16px;
@@ -3789,6 +3804,9 @@ figure {
 
 .max-width-560px {
   max-width: 560px;
+}
+.max-width-1280px {
+  max-width: 1280px;
 }
 
 .glow {
@@ -6519,6 +6537,21 @@ figure {
     background-attachment: scroll, scroll;
     position: relative;
   }
+  .section.beam-background2 {
+    z-index: 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.671),
+        rgba(0, 0, 0, 0.774)
+      ),
+      url("/photo_2024-02-24_00-08-54.jpg");
+    background-image: linear-gradient(to bottom, transparent 75%, var(--black)),
+      url("https://assets-global.website-files.com/652a06007428444b8a49aaec/652a06007428444b8a49ab13_Beam.jpg");
+    background-position: 0 0, 50% 0;
+    background-size: auto, cover;
+    background-attachment: scroll, scroll;
+    position: relative;
+  }
   .neu-icon {
     width: auto;
     border-radius: 16px;
@@ -7707,6 +7740,16 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .section.beam-background {
+    z-index: 0;
+    background: fixed;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.774)), url(/photo_2024-02-24_00-08-54.jpg);
+    /* background-image: linear-gradient(to bottom, transparent 75%, var(--black)), url(https://assets-global.website-files.com/652a060…/652a060…_Beam.jpg); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .section.beam-background2 {
     z-index: 0;
     background: fixed;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.774)), url(/photo_2024-02-24_00-08-54.jpg);
